@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: 'pink';" stylesheets="@../../../Slot_Machine_Individual/repaintless-master/repaintless-css/repaintless.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SlotMachinePage">
+   <children>
+      <BorderPane layoutX="26.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480.0" prefWidth="594.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="2.0" left="20.0" right="20.0" top="2.0" />
+         </padding>
+         <top>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="620.0" text="You Shall Be Rich " textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Broadway" size="28.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin></Label>
+         </top>
+         <left>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <JFXTextField fx:id="num1" alignment="CENTER" editable="false" focusColor="#fdfdff" promptText="000" unFocusColor="WHITE">
+                     <effect>
+                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                     </effect></JFXTextField>
+                   <ImageView fx:id="slot1" fitHeight="219.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="slide-from-top">
+                     <image>
+                        <Image url="@../../../Slot_Machine_Individual/blank.gif" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D width="200.0" />
+                     </viewport>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <effect>
+                        <Glow level="0.27" />
+                     </effect>
+                  </ImageView>
+                  <JFXTextField fx:id="fruit1" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Raspberry" unFocusColor="WHITE">
+                     <effect>
+                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                     </effect></JFXTextField>
+               </children>
+               <opaqueInsets>
+                  <Insets left="30.0" />
+               </opaqueInsets>
+            </VBox>
+         </left>
+         <center>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <JFXTextField fx:id="num2" alignment="CENTER" editable="false" focusColor="WHITE" promptText="000" unFocusColor="WHITE">
+                     <effect>
+                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                     </effect>
+                  </JFXTextField>
+                  <ImageView fx:id="slot2" fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Slot_Machine_Individual/blank.gif" />
+                     </image>
+                     <effect>
+                        <Glow level="0.27" />
+                     </effect>
+                  </ImageView>
+                  <JFXTextField fx:id="fruit2" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Raspberry" unFocusColor="WHITE">
+                     <effect>
+                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                     </effect></JFXTextField>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="TOP_RIGHT">
+               <children>
+                  <JFXTextField fx:id="num3" alignment="CENTER" editable="false" focusColor="WHITE" promptText="000" unFocusColor="WHITE">
+                     <effect>
+                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                     </effect></JFXTextField>
+                  <ImageView fx:id="slot3" fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Slot_Machine_Individual/blank.gif" />
+                     </image>
+                     <effect>
+                        <Glow level="0.27" />
+                     </effect>
+                  </ImageView>
+                  <JFXTextField fx:id="fruit3" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Raspberry" unFocusColor="WHITE">
+                     <effect>
+                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                     </effect></JFXTextField>
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="148.0" prefWidth="554.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXToggleButton fx:id="toggle" text="Toggle Me" />
+                  <JFXTextField fx:id="message" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" promptText="Earnings" text="The Insults" unFocusColor="WHITE">
+                     <effect>
+                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                     </effect>
+                  </JFXTextField>
+                  <JFXTextField fx:id="balance" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" promptText="Earnings" unFocusColor="WHITE">
+                     <effect>
+                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                     </effect>
+                  </JFXTextField>
+               </children>
+            </VBox>
+         </bottom>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </BorderPane>
+   </children>
+</AnchorPane>
