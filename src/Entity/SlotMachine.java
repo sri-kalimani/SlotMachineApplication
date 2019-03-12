@@ -21,7 +21,7 @@ public class SlotMachine {
         this.n1 = n1;
         this.n2 = n2;
         this.n3 = n3;
-        this.balance = 1000;
+        this.balance = 50;
     }
 
     public SlotMachine(Random rn1, Random rn2, Random rn3, int n1, int n2, int n3, int balance, String fruit1, String fruit2, String fruit3) {

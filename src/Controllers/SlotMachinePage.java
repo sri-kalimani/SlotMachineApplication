@@ -33,11 +33,13 @@ public class SlotMachinePage{
      */
     @FXML
     public void theGame(){
-            this.displayNum();
-            this.displaySlot();
-            this.displayFruit();
-            this.displayMessage();
-            this.displayBalance();
+        if (slotMachine.getBalance() > 0) {
+                this.displayNum();
+                this.displaySlot();
+                this.displayFruit();
+                this.displayMessage();
+                this.displayBalance();
+            }
         }
 
     /**
