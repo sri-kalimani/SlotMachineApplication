@@ -75,11 +75,11 @@ public class SlotMachinePage{
      */
     public void displayMessage(){
         if (slotMachine.isTriple())
-            message.setText("Great going! You got a triple");
+            message.setText("TRIPLE BONANZA");
         else if (slotMachine.isDouble())
-            message.setText("Good! You got a double...");
+            message.setText("Double Trouble");
         else
-            message.setText("sad.");
+            message.setText("BIG SAD");
 
     }
 
