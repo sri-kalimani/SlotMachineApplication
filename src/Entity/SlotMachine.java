@@ -22,11 +22,6 @@ public class SlotMachine {
         this.n2 = n2;
         this.n3 = n3;
         this.balance = 1000;
-//        this.n1 = rn1.nextInt((10) + 1);
-//        this.n2 = rn2.nextInt((10) + 1);
-//        this.n3 = rn3.nextInt((10) + 1);
-//        System.out.println("Random numbers in order: " + this.n1 + " " + this.n2 + " " + this.n3);
-
     }
 
     public SlotMachine(Random rn1, Random rn2, Random rn3, int n1, int n2, int n3, int balance, String fruit1, String fruit2, String fruit3) {
@@ -70,6 +65,9 @@ public class SlotMachine {
         return fruit3;
     }
 
+    /**
+     * Generates new set of random numbers
+     */
     public void generateNum(){
         n1 = rn1.nextInt((10) + 1);
         n2 = rn2.nextInt((10) + 1);
@@ -77,6 +75,10 @@ public class SlotMachine {
         System.out.println("Random numbers in order: " + n1 + " " + n2 + " " + n3);
     }
 
+    /**
+     * Assigns fruit based on number generated
+     * Stores fruit names in Hashmap
+     */
     public void assignFruit(){
         final HashMap<Integer, String> fruitMap = new HashMap<>();
 
@@ -91,21 +93,33 @@ public class SlotMachine {
         fruitMap.put(9, "Cherry");
         fruitMap.put(10, "Mango");
 
-
         this.fruit1 = fruitMap.get(this.getN1());
         this.fruit2 = fruitMap.get(this.getN2());
         this.fruit3 = fruitMap.get(this.getN3());
 
 
     }
+
+    /**
+     * Checks if all numbers are equal
+     * @return true of triple, false otherwise
+     */
     public boolean isTriple(){
         return (this.n1 == this.n2 && this.n1 == this.n3);
     }
 
+    /**
+     * Checks if 2 numbers are equal
+     * @return true if double, false otherwise
+     */
     public boolean isDouble (){
         return (this.n1 == this.n2 || this.n1 == this.n3 || this.n2 == n3);
     }
 
+    /**
+     * Calculates points earned or lost based on numbers
+     * @return int representing points earned or lost
+     */
     private int calcReward () {
         int reward;
         if (this.isTriple()) {
@@ -130,6 +144,10 @@ public class SlotMachine {
 
     }
 
+    /**
+     * Updates total balance based on calcReward()
+     * @return int representing total balance
+     */
     public int updateBalance(){
         calcReward();
         this.balance = this.balance + calcReward();

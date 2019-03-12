@@ -20,7 +20,6 @@ public class SlotMachinePage{
     @FXML private JFXButton pullLever;
     @FXML private JFXTextField message;
     @FXML private JFXTextField balance;
-//    private Button b = new Button ("Button");
 
 //   Image test = new ImageIcon("Resources/nine.gif").getImage();
 
