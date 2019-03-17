@@ -17,7 +17,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: 'black';" stylesheets="@../../../Slot_Machine_Individual/repaintless-master/repaintless-css/repaintless.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SlotMachinePage">
    <children>
-      <BorderPane layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="503.0" prefWidth="640.0">
+      <BorderPane layoutX="41.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="462.0" prefWidth="570.0">
          <padding>
             <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
          </padding>
@@ -107,7 +107,7 @@
             </VBox>
          </right>
          <bottom>
-            <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="148.0" prefWidth="554.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="116.0" prefWidth="550.0" BorderPane.alignment="CENTER">
                <children>
                   <JFXButton fx:id="pullLever" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onMousePressed="#theGame" prefHeight="29.0" prefWidth="329.0" ripplerFill="#c5a3a3" text="Click Imaginery Lever" textAlignment="CENTER" textFill="#eba9a9">
                      <font>
@@ -150,26 +150,11 @@
                <children>
                   <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../Slot_Machine_Individual/Mango_SlotPage.jpg" />
+                        <Image url="@../Resources/Mango_SlotPage.jpg" />
                      </image>
                      <viewport>
                         <Rectangle2D />
                      </viewport>
-                  </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../Slot_Machine_Individual/Strawberry_SlotPage.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="189.0" layoutX="76.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../Slot_Machine_Individual/Strawberry_SlotPage.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="189.0" layoutX="151.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../Slot_Machine_Individual/Strawberry_SlotPage.jpg" />
-                     </image>
                   </ImageView>
                </children>
             </HBox>
