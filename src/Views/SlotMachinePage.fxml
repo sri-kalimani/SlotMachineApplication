@@ -4,38 +4,33 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: 'pink';" stylesheets="@../../../Slot_Machine_Individual/repaintless-master/repaintless-css/repaintless.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SlotMachinePage">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: 'black';" stylesheets="@../../../Slot_Machine_Individual/repaintless-master/repaintless-css/repaintless.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SlotMachinePage">
    <children>
-      <BorderPane layoutX="26.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480.0" prefWidth="594.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="503.0" prefWidth="640.0">
          <padding>
-            <Insets bottom="2.0" left="20.0" right="20.0" top="2.0" />
+            <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
          </padding>
-         <top>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="620.0" text="You Shall Be Rich " textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="Broadway" size="28.0" />
-               </font>
-               <BorderPane.margin>
-                  <Insets left="10.0" right="10.0" />
-               </BorderPane.margin></Label>
-         </top>
          <left>
             <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="TOP_LEFT">
                <children>
-                  <JFXTextField fx:id="num1" alignment="CENTER" editable="false" focusColor="#fdfdff" promptText="000" unFocusColor="WHITE">
+                  <JFXTextField fx:id="num1" alignment="CENTER" editable="false" focusColor="WHITE" promptText="000" unFocusColor="WHITE">
                      <effect>
-                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
-                     </effect></JFXTextField>
+                        <InnerShadow choke="1.0" color="#f9f5f5" height="255.0" radius="127.0" width="255.0" />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></JFXTextField>
                    <ImageView fitHeight="219.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="slide-from-top">
                      <viewport>
                         <Rectangle2D width="200.0" />
@@ -47,10 +42,13 @@
                         <Glow level="0.27" />
                      </effect>
                   </ImageView>
-                  <JFXTextField fx:id="fruit1" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Raspberry" unFocusColor="WHITE">
+                  <JFXTextField fx:id="fruit1" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Fruit" unFocusColor="WHITE">
                      <effect>
                         <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
-                     </effect></JFXTextField>
+                     </effect>
+                     <font>
+                        <Font name="Calibri Light" size="15.0" />
+                     </font></JFXTextField>
                </children>
                <opaqueInsets>
                   <Insets left="30.0" />
@@ -64,16 +62,22 @@
                      <effect>
                         <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
                      </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
                   </JFXTextField>
                   <ImageView fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <Glow level="0.27" />
                      </effect>
                   </ImageView>
-                  <JFXTextField fx:id="fruit2" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Raspberry" unFocusColor="WHITE">
+                  <JFXTextField fx:id="fruit2" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Fruit" unFocusColor="WHITE">
                      <effect>
                         <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
-                     </effect></JFXTextField>
+                     </effect>
+                     <font>
+                        <Font name="Calibri Light" size="15.0" />
+                     </font></JFXTextField>
                </children>
             </VBox>
          </center>
@@ -83,42 +87,57 @@
                   <JFXTextField fx:id="num3" alignment="CENTER" editable="false" focusColor="WHITE" promptText="000" unFocusColor="WHITE">
                      <effect>
                         <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
-                     </effect></JFXTextField>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></JFXTextField>
                   <ImageView fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <Glow level="0.27" />
                      </effect>
                   </ImageView>
-                  <JFXTextField fx:id="fruit3" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Raspberry" unFocusColor="WHITE">
+                  <JFXTextField fx:id="fruit3" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Fruit" unFocusColor="WHITE">
                      <effect>
                         <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
-                     </effect></JFXTextField>
+                     </effect>
+                     <font>
+                        <Font name="Calibri Light" size="15.0" />
+                     </font></JFXTextField>
                </children>
             </VBox>
          </right>
          <bottom>
             <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="148.0" prefWidth="554.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="pullLever" alignment="CENTER" buttonType="RAISED" onMousePressed="#theGame" ripplerFill="#be5f5f" text="Pull Imaginery Lever" textAlignment="CENTER" textFill="WHITE">
+                  <JFXButton fx:id="pullLever" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onMousePressed="#theGame" prefHeight="29.0" prefWidth="329.0" ripplerFill="#c5a3a3" text="Click Imaginery Lever" textAlignment="CENTER" textFill="#eba9a9">
                      <font>
-                        <Font size="27.0" />
+                        <Font name="Castellar" size="18.0" />
                      </font>
                      <opaqueInsets>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </opaqueInsets>
                      <effect>
-                        <BoxBlur height="152.8" iterations="2" width="191.24" />
+                        <BoxBlur height="152.8" iterations="2" width="191.24">
+                           <input>
+                              <Glow />
+                           </input></BoxBlur>
                      </effect>
                   </JFXButton>
-                  <JFXTextField fx:id="message" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" promptText="Earnings" text="The Insults" unFocusColor="WHITE">
+                  <JFXTextField fx:id="message" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="10.0" prefWidth="554.0" promptText="Earnings" text="The Insults" unFocusColor="WHITE">
                      <effect>
-                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                        <InnerShadow choke="1.0" color="#dfbdbd" height="255.0" radius="127.0" width="255.0" />
                      </effect>
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="balance" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" promptText="Earnings" unFocusColor="WHITE">
+                  <JFXTextField fx:id="balance" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="9.0" prefWidth="554.0" promptText="Earnings" unFocusColor="WHITE">
                      <effect>
-                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                        <InnerShadow choke="1.0" color="#dfbdbd" height="255.0" radius="127.0" width="255.0" />
                      </effect>
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
                   </JFXTextField>
                </children>
             </VBox>
@@ -126,6 +145,35 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <top>
+            <HBox prefHeight="52.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Slot_Machine_Individual/Mango_SlotPage.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Slot_Machine_Individual/Strawberry_SlotPage.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="189.0" layoutX="76.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Slot_Machine_Individual/Strawberry_SlotPage.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="189.0" layoutX="151.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Slot_Machine_Individual/Strawberry_SlotPage.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </top>
       </BorderPane>
    </children>
 </AnchorPane>

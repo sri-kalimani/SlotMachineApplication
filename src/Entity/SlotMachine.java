@@ -16,15 +16,16 @@ public class SlotMachine {
     private int n1, n2, n3;
     private String fruit1 = "", fruit2 = "", fruit3 = "";
     private int balance;
+    int reward;
 
     public SlotMachine(int n1, int n2, int n3) {
         this.n1 = n1;
         this.n2 = n2;
         this.n3 = n3;
-        this.balance = 50;
+        this.balance = 1000;
     }
 
-    public SlotMachine(Random rn1, Random rn2, Random rn3, int n1, int n2, int n3, int balance, String fruit1, String fruit2, String fruit3) {
+    public SlotMachine(Random rn1, Random rn2, Random rn3, int n1, int n2, int n3, int balance, String fruit1, String fruit2, String fruit3, int reward) {
         this.rn1 = rn1;
         this.rn2 = rn2;
         this.rn3 = rn3;
@@ -35,6 +36,7 @@ public class SlotMachine {
         this.fruit1 = fruit1;
         this.fruit2 = fruit2;
         this.fruit3 = fruit3;
+        this.reward = reward;
     }
 
     public int getN1() {
@@ -64,6 +66,8 @@ public class SlotMachine {
     public String getFruit3() {
         return fruit3;
     }
+
+    public int getReward() { return reward; }
 
     /**
      * Generates new set of random numbers
@@ -121,7 +125,6 @@ public class SlotMachine {
      * @return int representing points earned or lost
      */
     private int calcReward () {
-        int reward;
         if (this.isTriple()) {
             System.out.println("Is Triple!");
             reward = this.n1*this.n1*this.n1;

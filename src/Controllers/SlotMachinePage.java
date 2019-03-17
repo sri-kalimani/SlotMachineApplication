@@ -21,8 +21,6 @@ public class SlotMachinePage{
     @FXML private JFXTextField message;
     @FXML private JFXTextField balance;
 
-//   Image test = new ImageIcon("Resources/nine.gif").getImage();
-
     int n1 = 0;
     int n2 = 0;
     int n3 = 0;
@@ -35,10 +33,10 @@ public class SlotMachinePage{
     public void theGame(){
         if (slotMachine.getBalance() > 0) {
                 this.displayNum();
+                this.displayBalance();
                 this.displaySlot();
                 this.displayFruit();
                 this.displayMessage();
-                this.displayBalance();
             }
         }
 
@@ -76,11 +74,11 @@ public class SlotMachinePage{
      */
     public void displayMessage(){
         if (slotMachine.isTriple())
-            message.setText("TRIPLE BONANZA");
+            message.setText("TRIPLE BONANZA! You've earned $" + slotMachine.getReward());
         else if (slotMachine.isDouble())
-            message.setText("Double Trouble");
+            message.setText("Double Trouble! You've earned $" + slotMachine.getReward());
         else
-            message.setText("BIG SAD");
+            message.setText("BIG SAD! You've lost $" + (-slotMachine.getReward()));
 
     }
 
@@ -89,7 +87,7 @@ public class SlotMachinePage{
      */
     public void displayBalance(){
         slotMachine.updateBalance();
-        balance.setText(Integer.toString(slotMachine.getBalance()));
+        balance.setText("New Balance = " + slotMachine.getBalance());
     }
 
 

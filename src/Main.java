@@ -9,7 +9,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("Views/SlotMachinePage.fxml"));
+            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("Views/StartPage.fxml"));
             Scene scene = new Scene(root, root.getPrefWidth(), root.getPrefHeight());
             primaryStage.setScene(scene);
             primaryStage.show();
