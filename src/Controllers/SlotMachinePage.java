@@ -9,14 +9,19 @@ import Entity.SlotMachine;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
-import javax.swing.text.html.ImageView;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 
 
 public class SlotMachinePage{
 
     @FXML private JFXTextField num1, num2, num3;
-    @FXML private ImageView slot1, slot2 ,slot3;
-    @FXML private JFXTextField fruit1, fruit2, fruit3;
+    @FXML private ImageView slot1;
+    @FXML private ImageView slot2;
+    @FXML private ImageView slot3;
+    @FXML private ImageView icon1;
+    @FXML private ImageView icon2;
+    @FXML private ImageView icon3;
     @FXML private JFXButton pullLever;
     @FXML private JFXTextField message;
     @FXML private JFXTextField balance;
@@ -53,20 +58,22 @@ public class SlotMachinePage{
     /**
      * updates slot image
      */
-    public void displaySlot(){
-
+    @FXML
+    public void displaySlot() {
+        slotMachine.assignImage();
+        this.slot1.setImage(slotMachine.getImage1());
+        this.slot2.setImage(slotMachine.getImage2());
+        this.slot3.setImage(slotMachine.getImage3());
     }
 
     /**
      * updates fruit name
      */
     public void displayFruit(){
-
         slotMachine.assignFruit();
-        this.fruit1.setText(slotMachine.getFruit1());
-        this.fruit2.setText(slotMachine.getFruit2());
-        this.fruit3.setText(slotMachine.getFruit3());
-
+        this.icon1.setImage(slotMachine.getIcon1());
+        this.icon2.setImage(slotMachine.getIcon2());
+        this.icon3.setImage(slotMachine.getIcon3());
     }
 
     /**

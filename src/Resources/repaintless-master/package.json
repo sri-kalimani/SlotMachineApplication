@@ -1,0 +1,29 @@
+{
+  "name": "repaintless",
+  "version": "1.4.0",
+  "description": "Repaintless is a library of CSS animations, which don't cause costly repaints and recalculations in our browser. Animations are smooth and simple.",
+  "main": "./repaintless-css/repaintless.css",
+  "author": "Anna Migas <amjmigas@gmail.com>",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "animations",
+    "performance",
+    "FLIP"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szynszyliszys/repaintless.git"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "run-sequence": "^1.1.5"
+  }
+}

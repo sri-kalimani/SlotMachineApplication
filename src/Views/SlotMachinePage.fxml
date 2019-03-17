@@ -7,51 +7,55 @@
 <?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: 'black';" stylesheets="@../../../Slot_Machine_Individual/repaintless-master/repaintless-css/repaintless.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SlotMachinePage">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: 'black';" styleClass="fade-out" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SlotMachinePage">
    <children>
-      <BorderPane layoutX="41.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="566.0" prefWidth="570.0">
+      <BorderPane layoutX="14.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="559.0" prefWidth="620.0">
          <padding>
             <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
          </padding>
          <left>
-            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="TOP_LEFT">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="345.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT">
                <children>
-                  <JFXTextField fx:id="num1" alignment="CENTER" editable="false" focusColor="WHITE" promptText="000" unFocusColor="WHITE">
+                  <JFXTextField fx:id="num1" alignment="CENTER" editable="false" focusColor="WHITE" promptText="0" unFocusColor="WHITE">
                      <effect>
-                        <InnerShadow choke="1.0" color="#f9f5f5" height="255.0" radius="127.0" width="255.0" />
+                        <InnerShadow choke="1.0" color="#e7e4b2" height="255.0" radius="127.0" width="255.0" />
                      </effect>
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font></JFXTextField>
-                   <ImageView fitHeight="219.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="slide-from-top">
-                     <viewport>
-                        <Rectangle2D width="200.0" />
-                     </viewport>
+                   <ImageView fx:id="slot1" fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                      <effect>
                         <Glow level="0.27" />
                      </effect>
-                     <image>
-                        <Image url="@../Resources/one.gif" />
-                     </image>
                   </ImageView>
-                  <JFXTextField fx:id="fruit1" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Fruit" unFocusColor="WHITE">
+                  <ImageView fx:id="icon1" fitHeight="63.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
                      <effect>
-                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
                      </effect>
-                     <font>
-                        <Font name="Calibri Light" size="15.0" />
-                     </font></JFXTextField>
+                  </ImageView>
                </children>
                <opaqueInsets>
                   <Insets left="30.0" />
@@ -59,66 +63,70 @@
             </VBox>
          </left>
          <center>
-            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="TOP_CENTER">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="345.0" prefWidth="200.0" BorderPane.alignment="TOP_CENTER">
                <children>
-                  <JFXTextField fx:id="num2" alignment="CENTER" editable="false" focusColor="WHITE" promptText="000" unFocusColor="WHITE">
+                  <JFXTextField fx:id="num2" alignment="CENTER" editable="false" focusColor="WHITE" promptText="0" unFocusColor="WHITE">
                      <effect>
-                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                        <InnerShadow choke="1.0" color="#e7e4b2" height="255.0" radius="127.0" width="255.0" />
                      </effect>
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </JFXTextField>
-                  <ImageView fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="slot2" fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <Glow level="0.27" />
                      </effect>
-                     <image>
-                        <Image url="@../Resources/one.gif" />
-                     </image>
                   </ImageView>
-                  <JFXTextField fx:id="fruit2" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Fruit" unFocusColor="WHITE">
+                  <ImageView fx:id="icon2" fitHeight="63.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
-                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
                      </effect>
-                     <font>
-                        <Font name="Calibri Light" size="15.0" />
-                     </font></JFXTextField>
+                  </ImageView>
                </children>
             </VBox>
          </center>
          <right>
-            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="TOP_RIGHT">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="345.0" prefWidth="200.0" BorderPane.alignment="TOP_RIGHT">
                <children>
-                  <JFXTextField fx:id="num3" alignment="CENTER" editable="false" focusColor="WHITE" promptText="000" unFocusColor="WHITE">
+                  <JFXTextField fx:id="num3" alignment="CENTER" editable="false" focusColor="WHITE" promptText="0" unFocusColor="WHITE">
                      <effect>
-                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                        <InnerShadow choke="1.0" color="#e7e4b2" height="255.0" radius="127.0" width="255.0" />
                      </effect>
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font></JFXTextField>
-                  <ImageView fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="slot3" fitHeight="219.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <Glow level="0.27" />
                      </effect>
-                     <image>
-                        <Image url="@../Resources/one.gif" />
-                     </image>
                   </ImageView>
-                  <JFXTextField fx:id="fruit3" alignment="CENTER" editable="false" focusColor="WHITE" promptText="Fruit" unFocusColor="WHITE">
+                  <ImageView fx:id="icon3" fitHeight="63.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
-                        <InnerShadow choke="1.0" color="WHITE" height="255.0" radius="127.0" width="255.0" />
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
                      </effect>
-                     <font>
-                        <Font name="Calibri Light" size="15.0" />
-                     </font></JFXTextField>
+                  </ImageView>
                </children>
             </VBox>
          </right>
          <bottom>
-            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="116.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="155.0" prefWidth="555.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="pullLever" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onMousePressed="#theGame" prefHeight="29.0" prefWidth="329.0" ripplerFill="#c5a3a3" text="Click Imaginery Lever" textAlignment="CENTER" textFill="#eba9a9">
+                  <JFXButton fx:id="pullLever" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onMousePressed="#theGame" prefHeight="29.0" prefWidth="329.0" ripplerFill="#c5a3a3" text="Click Imaginery Lever" textAlignment="CENTER" textFill="#e7e4b2" textOverrun="CENTER_ELLIPSIS">
                      <font>
                         <Font name="Castellar" size="18.0" />
                      </font>
@@ -132,20 +140,20 @@
                            </input></BoxBlur>
                      </effect>
                   </JFXButton>
-                  <JFXTextField fx:id="message" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="10.0" prefWidth="554.0" promptText="Earnings" text="The Insults" unFocusColor="WHITE">
+                  <JFXTextField fx:id="message" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="554.0" promptText="Earnings" text="The Insults" unFocusColor="WHITE">
                      <effect>
-                        <InnerShadow choke="1.0" color="#dfbdbd" height="255.0" radius="127.0" width="255.0" />
+                        <InnerShadow choke="1.0" color="#e7e4b2" height="255.0" radius="127.0" width="255.0" />
                      </effect>
                      <font>
-                        <Font name="Calibri Light" size="16.0" />
+                        <Font name="Century" size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="balance" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="9.0" prefWidth="554.0" promptText="Earnings" unFocusColor="WHITE">
+                  <JFXTextField fx:id="balance" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="554.0" promptText="Earnings" unFocusColor="WHITE">
                      <effect>
-                        <InnerShadow choke="1.0" color="#dfbdbd" height="255.0" radius="127.0" width="255.0" />
+                        <InnerShadow choke="1.0" color="#e7e4b2" height="255.0" radius="127.0" width="255.0" />
                      </effect>
                      <font>
-                        <Font name="Calibri Light" size="16.0" />
+                        <Font name="Century" size="14.0" />
                      </font>
                   </JFXTextField>
                </children>
@@ -155,50 +163,20 @@
             <Insets />
          </opaqueInsets>
          <top>
-            <HBox alignment="CENTER" prefHeight="114.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="36.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/Mango_SlotPage.jpg" />
-                     </image>
-                     <viewport>
-                        <Rectangle2D />
-                     </viewport>
-                  </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/Mango_SlotPage.jpg" />
-                     </image>
-                     <viewport>
-                        <Rectangle2D />
-                     </viewport>
-                  </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/Mango_SlotPage.jpg" />
-                     </image>
-                     <viewport>
-                        <Rectangle2D />
-                     </viewport>
-                  </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/Mango_SlotPage.jpg" />
-                     </image>
-                     <viewport>
-                        <Rectangle2D />
-                     </viewport>
-                  </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/Mango_SlotPage.jpg" />
-                     </image>
-                     <viewport>
-                        <Rectangle2D />
-                     </viewport>
-                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="65.0" text="Home" textFill="#dd8484">
+                     <font>
+                        <Font name="Cooper Black" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="503.0" layoutY="2.0" prefHeight="31.0" prefWidth="88.0" text="I'm Done!" textFill="#dd8484">
+                     <font>
+                        <Font name="Cooper Black" size="13.0" />
+                     </font>
+                  </JFXButton>
                </children>
-            </HBox>
+            </Pane>
          </top>
       </BorderPane>
    </children>
