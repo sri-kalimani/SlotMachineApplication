@@ -15,7 +15,7 @@ import javax.swing.text.html.ImageView;
 public class SlotMachinePage{
 
     @FXML private JFXTextField num1, num2, num3;
-    @FXML private ImageView slot;
+    @FXML private ImageView slot1, slot2 ,slot3;
     @FXML private JFXTextField fruit1, fruit2, fruit3;
     @FXML private JFXButton pullLever;
     @FXML private JFXTextField message;
