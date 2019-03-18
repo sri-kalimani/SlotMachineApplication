@@ -9,8 +9,15 @@ import Entity.SlotMachine;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 
 public class SlotMachinePage{
@@ -22,14 +29,19 @@ public class SlotMachinePage{
     @FXML private ImageView icon1;
     @FXML private ImageView icon2;
     @FXML private ImageView icon3;
+    @FXML private JFXButton home;
+    @FXML private JFXButton toEnd;
     @FXML private JFXButton pullLever;
     @FXML private JFXTextField message;
     @FXML private JFXTextField balance;
+    @FXML private AnchorPane rootPane;
 
     int n1 = 0;
     int n2 = 0;
     int n3 = 0;
     SlotMachine slotMachine = new SlotMachine(n1, n2, n3);
+
+    public SlotMachinePage() { }
 
     /**
      * updates all slot machine objects on click
@@ -44,6 +56,26 @@ public class SlotMachinePage{
                 this.displayMessage();
             }
         }
+
+    @FXML
+    public void backHome()throws IOException {
+        AnchorPane loader = FXMLLoader.load(getClass().getResource("/Views/StartPage.fxml"));
+        rootPane.getChildren().setAll(loader);
+    }
+
+    @FXML
+    public void toEnd(){
+        Stage primaryStage = new Stage();
+            try {
+                AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/EndPage.fxml"));
+                Scene scene = new Scene(root, root.getPrefWidth(), root.getPrefHeight());
+                primaryStage.setScene(scene);
+                primaryStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+    }
+
 
     /**
      * updates number
@@ -67,7 +99,7 @@ public class SlotMachinePage{
     }
 
     /**
-     * updates fruit name
+     * updates fruit icon
      */
     public void displayFruit(){
         slotMachine.assignFruit();
@@ -81,11 +113,11 @@ public class SlotMachinePage{
      */
     public void displayMessage(){
         if (slotMachine.isTriple())
-            message.setText("TRIPLE BONANZA! You've earned $" + slotMachine.getReward());
+            message.setText("ULTIMATE FRUIT PUNCH! + $" + slotMachine.getReward());
         else if (slotMachine.isDouble())
-            message.setText("Double Trouble! You've earned $" + slotMachine.getReward());
+            message.setText("FRUIT PUNCH! + $" + slotMachine.getReward());
         else
-            message.setText("BIG SAD! You've lost $" + (-slotMachine.getReward()));
+            message.setText("BIG FRUIT SAD! -$" + (-slotMachine.getReward()));
 
     }
 
@@ -94,8 +126,9 @@ public class SlotMachinePage{
      */
     public void displayBalance(){
         slotMachine.updateBalance();
-        balance.setText("New Balance = " + slotMachine.getBalance());
+        balance.setText("$" + slotMachine.getBalance());
     }
+
 
 
 }

@@ -98,17 +98,18 @@ public class SlotMachine {
      * Generates new set of random numbers
      */
     public void generateNum(){
-        n1 = rn1.nextInt((9 - 1) + 1) + 1;
-        n2 = rn2.nextInt((9 - 1) + 1) + 1;
-        n3 = rn3.nextInt((9 - 1) + 1) + 1;
+        n1 = rn1.nextInt((10 - 1) + 1) + 1;
+        n2 = rn2.nextInt((10 - 1) + 1) + 1;
+        n3 = rn3.nextInt((10 - 1) + 1) + 1;
         System.out.println("Random numbers in order: " + n1 + " " + n2 + " " + n3);
     }
 
     /**
-     * Assigns fruit based on number generated
-     * Stores fruit names in Hashmap
+     * Assigns fruit icon based on number generated
+     * Stores fruit icons in Hashmap
      */
     public void assignFruit(){
+
         Image raspberry = new Image (this.getClass().getResourceAsStream("/Resources/raspberry.png"));
         Image lemon = new Image (this.getClass().getResourceAsStream("/Resources/lemon.png"));
         Image banana = new Image (this.getClass().getResourceAsStream("/Resources/banana.png"));
@@ -120,19 +121,7 @@ public class SlotMachine {
         Image cherry = new Image (this.getClass().getResourceAsStream("/Resources/cherry.gif"));
         Image mango = new Image (this.getClass().getResourceAsStream("/Resources/mango.jpg"));
 
-//        final HashMap<Integer, String> fruitMap = new HashMap<>();
         final HashMap<Integer, Image> iconMap = new HashMap<>();
-
-//        fruitMap.put(1, "Raspberry");
-//        fruitMap.put(2, "Lemon");
-//        fruitMap.put(3, "Banana");
-//        fruitMap.put(4, "Plum");
-//        fruitMap.put(5, "Pear");
-//        fruitMap.put(6, "Orange");
-//        fruitMap.put(7, "Strawberry");
-//        fruitMap.put(8, "Kiwi");
-//        fruitMap.put(9, "Cherry");
-//        fruitMap.put(10, "Mango");
 
         iconMap.put(1, raspberry);
         iconMap.put(2, lemon);
@@ -145,15 +134,15 @@ public class SlotMachine {
         iconMap.put(9, cherry);
         iconMap.put(10, mango);
 
-//        this.fruit1 = fruitMap.get(this.getN1());
-//        this.fruit2 = fruitMap.get(this.getN2());
-//        this.fruit3 = fruitMap.get(this.getN3());
-
         this.icon1 = iconMap.get(this.getN1());
         this.icon2 = iconMap.get(this.getN2());
         this.icon3 = iconMap.get(this.getN3());
     }
 
+    /**
+     * Assigns image to slot based on random number generated
+     * Stores images in hashmap
+     */
     public void assignImage(){
 
         Image image1 = new Image(this.getClass().getResourceAsStream("/Resources/1-Number-PNG.png"));
@@ -165,7 +154,7 @@ public class SlotMachine {
         Image image7 = new Image(this.getClass().getResourceAsStream("/Resources/7-Number-PNG.png"));
         Image image8 = new Image(this.getClass().getResourceAsStream("/Resources/8-Number-PNG.png"));
         Image image9 = new Image(this.getClass().getResourceAsStream("/Resources/9-Number-PNG.png"));
-        Image imageBlank = new Image(this.getClass().getResourceAsStream("/Resources/0-Number-PNG.png"));
+        Image imageBlank = new Image(this.getClass().getResourceAsStream("/Resources/10-Number-PNG.png"));
 
         final HashMap<Integer, Image> imageMap = new HashMap<>();
 

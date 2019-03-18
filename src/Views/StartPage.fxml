@@ -1,12 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StartPage">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="640.0" style="-fx-background-color: 'black';" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StartPage">
    <children>
-      <ImageView fitHeight="318.0" fitWidth="344.0" layoutX="148.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" />
-      <JFXButton fx:id="button" layoutX="294.0" layoutY="407.0" onMousePressed="#changeScene" text="Press Me!" />
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="39.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/orange.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="183.0" fitWidth="146.0" layoutX="473.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/cherry.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="453.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/lemon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="258.0" fitWidth="281.0" layoutX="191.0" layoutY="153.0" onMousePressed="#changeScene" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/pressStart.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="27.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/raspberry.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="267.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/mango.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="398.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/plum.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="31.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/banana.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="248.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/kiwi.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="531.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/pear.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="171.0" layoutX="101.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/strawberry.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
