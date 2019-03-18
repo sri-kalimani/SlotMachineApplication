@@ -10,15 +10,10 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-
-import javafx.stage.Stage;
-
 import java.io.IOException;
-
 
 public class SlotMachinePage{
 
@@ -64,16 +59,9 @@ public class SlotMachinePage{
     }
 
     @FXML
-    public void toEnd(){
-        Stage primaryStage = new Stage();
-            try {
-                AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/EndPage.fxml"));
-                Scene scene = new Scene(root, root.getPrefWidth(), root.getPrefHeight());
-                primaryStage.setScene(scene);
-                primaryStage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+    public void toEnd() throws IOException{
+        AnchorPane loader = FXMLLoader.load(getClass().getResource("/Views/EndPage.fxml"));
+        rootPane.getChildren().setAll(loader);
     }
 
 

@@ -4,19 +4,19 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="344.0" style="-fx-background-color: 'black';" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SlotMachinePage">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: 'black';" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SlotMachinePage">
    <children>
-      <ImageView fitHeight="82.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="118.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Resources/cherry.gif" />
          </image>
       </ImageView>
-      <ImageView fitHeight="44.0" fitWidth="105.0" layoutX="246.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="105.0" fitWidth="145.0" layoutX="469.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Resources/lemon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="153.0" fitWidth="221.0" layoutX="67.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="295.0" fitWidth="421.0" layoutX="110.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Resources/end.gif" />
          </image>
